@@ -7,8 +7,8 @@ internal data class Movie(
     val results: List<MovieItem>
 )
 
-internal data class MovieItem(
-    val title: String,
-    val overview: String,
-    val posterPath: String
+data class MovieItem(
+    val title: String?,
+    val overview: String?,
+    val posterPath: String?
 )
