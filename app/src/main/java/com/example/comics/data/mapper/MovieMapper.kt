@@ -9,7 +9,6 @@ internal fun MovieResponse.toMovie(): Movie {
     return Movie(
         page = page,
         totalPages = totalPages,
-        totalResults = totalResults,
         results = results.map { it.toMovieItem() }
     )
 }

@@ -44,9 +44,16 @@ internal fun MoviesScreen(viewModel: MoviesViewModel) {
         }
 
         state.error?.let {
-            Text(
-                text = it.asString()
-            )
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = it.asString()
+                )
+            }
         }
     }
 }

@@ -28,7 +28,6 @@ val domainModule = module {
 
 val presentationModule = module {
     single<CoroutineDispatcher> { Dispatchers.IO }
-
     viewModelOf(::MoviesViewModel)
 }
 

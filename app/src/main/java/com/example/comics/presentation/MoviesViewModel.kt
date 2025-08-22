@@ -9,13 +9,14 @@ import kotlinx.coroutines.launch
 import com.example.comics.util.domain.onError
 import com.example.comics.util.domain.onSuccess
 import com.example.comics.util.presentation.toUiText
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.update
 
 private const val FIRST_PAGE = 1
 
 internal class MoviesViewModel(
-    private val getMoviesUseCase: GetMoviesUseCase
+    private val getMoviesUseCase: GetMoviesUseCase,
+    private val dispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(MoviesState())
@@ -35,16 +36,15 @@ internal class MoviesViewModel(
         }
     }
 
-    private fun loadPage(page: Int) {
-        //CHECAR O DISPATCHER
-        viewModelScope.launch(Dispatchers.IO) {
-            _state.update {
-                it.copy(
-                    isLoading = true,
-                    error = null
-                )
-            }
+    fun loadPage(page: Int) {
+        _state.update {
+            it.copy(
+                isLoading = true,
+                error = null
+            )
+        }
 
+        viewModelScope.launch(dispatcher) {
             getMoviesUseCase(page)
                 .onSuccess {
                     val newMovies = _state.value.movies + it.results

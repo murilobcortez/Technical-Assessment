@@ -1,0 +1,47 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/3xN4vNPWBSVDsiiOzL5sB95Sa1J.jpg",
+      "id": 257094,
+      "title": "Holland",
+      "original_title": "Holland",
+      "overview": "Nancy is a teacher whose life with her husband in Holland, Michigan, tumbles into a twisted tale when she and her colleague become suspicious of a secret.",
+      "poster_path": "/39jIr3A4ScUeGxFdMeARYKNxTgU.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        53,
+        9648
+      ],
+      "popularity": 99.0048,
+      "release_date": "2025-03-27",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 22
+    },
+    {
+      "backdrop_path": "/ylxDmFn652OPXt0A7pW6VhwzLyx.jpg",
+      "id": 774100,
+      "title": "Alexander and the Terrible, Horrible, No Good, Very Bad Road Trip",
+      "original_title": "Alexander and the Terrible, Horrible, No Good, Very Bad Road Trip",
+      "overview": "Follow eleven-year-old Alexander and his family as they embark on a dream Spring Break vacation to Mexico City only to have all their plans go terribly wrong when they discover a cursed idol.",
+      "poster_path": "/fLpIMf6jfdWg9mxIm8RP5uzdp47.jpg",
+      "media_type": "movie",
+      "adult": false,
+      "original_language": "en",
+      "genre_ids": [
+        35,
+        10751
+      ],
+      "popularity": 1.8437,
+      "release_date": "2025-03-26",
+      "video": false,
+      "vote_average": 8.5,
+      "vote_count": 3
+    }
+  ],
+  "total_pages": 2,
+  "total_results": 2
+}

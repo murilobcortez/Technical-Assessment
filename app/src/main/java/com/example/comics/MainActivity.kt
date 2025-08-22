@@ -9,8 +9,10 @@ import com.example.comics.presentation.MoviesScreen
 import com.example.comics.presentation.MoviesViewModel
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 
-internal class MainActivity : ComponentActivity() {
+class MainActivity : ComponentActivity() {
+    @OptIn(KoinExperimentalAPI::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
